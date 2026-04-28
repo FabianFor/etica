@@ -1,0 +1,21 @@
+# **App Name**: Ethos Compass
+
+## Core Features:
+
+- Fixed Navbar and Smooth Navigation: A persistent top navigation bar featuring the brand logo 'Brújula Ética', 'Portafolio Digital · HUM-010' subtitle, and navigation links that scroll smoothly to respective sections. The navbar also includes a 'Compartir en LinkedIn' button and automatically updates the active state of navigation links based on scroll position, with an offset of 100px.
+- Dynamic Hero Section Display: Renders the introductory content of the portfolio, featuring a golden badge, a large, stylized title with italicized gold text, a descriptive paragraph, a grid of four meta-items (Curso, Carrera, Semestre, Docente), and a decorative gold line. Visual enhancements include subtle radial golden and blue effects, along with a staggered fade-up animation for all child elements.
+- Modular Content Sections: Displays six distinct content sections—Inicio, Equipo, Manifiesto, Podcast, Video-reacción, Infografía—with alternating background colors (white and cream). Each section implements specific layout configurations such as grids (5-column team grid) and two-column structures for detailed content, ensuring proper padding, minimum height, and vertical centering.
+- Interactive Team Cards: Generates a grid of interactive student profile cards within the 'Equipo' section. Each card includes a placeholder image with a '👤' icon, student name, career in uppercase gold, a two-line bio, and a LinkedIn button, featuring a subtle lift and shadow expansion on hover.
+- Multimedia Integration and Information Displays: Facilitates the embedding of external content through dedicated sections: a 'Podcast' section with a player area and dilemma card, and a 'Video-reacción' section with a video frame placeholder and detailed analysis items. The 'Infografía' section features a large card with a gradient frame and interactive layer markers.
+- Professional Footer Display: A dark-themed footer, designed with a three-column layout to host the logo and institutional information, essential metadata, and an additional 'Compartir en LinkedIn' button, utilizing white and muted text for contrast and readability.
+
+## Style Guidelines:
+
+- Primary color: Navy (#1b3a6b). Chosen from the user's palette, this deep blue establishes a professional, academic tone, providing excellent contrast against light backgrounds for critical text and branding elements.
+- Background colors: A carefully selected light scheme composed of 'Blanco' (#ffffff), 'Fondo' (#faf9f6), and 'Cream' (#f7f4ee) from the user's specified palette. These warm, neutral tones create a clean, elegant canvas and provide visual separation and rhythm between portfolio sections.
+- Accent color: Gold (#c9a84c). Directly from the user's palette, this distinguished golden hue will be utilized to highlight key conceptual text (e.g., in titles and tags), decorative elements, and section dividers, symbolizing ethical value and academic prestige.
+- Headlines font: 'Cormorant Garamond' (serif), chosen for its elegant and academic appeal in titles and prominent text, supporting various weights (300, 400, 600, 700) and italic styles as requested. Note: currently only Google Fonts are supported.
+- Body font: 'DM Sans' (sans-serif), selected to provide clear, readable body text with a modern feel, complementing the serif titles. Supports weights 300, 400, 500, 600. Note: currently only Google Fonts are supported.
+- Simple, descriptive icons, such as the specified 👤 for team placeholders, 🎙️ for podcasts, and 🗺️ for infographics, integrated seamlessly to enhance content clarity without distracting from the editorial aesthetic. These icons should align with the overall minimalist design.
+- Consistent layout principles including alternating section backgrounds (white/cream), generous vertical (96px) and horizontal (80px) padding for all sections, and sections with 'min-height: 100vh' vertically centered using flexbox, maintaining an organized and academic presentation. Minimal border-radius (2-4px) to ensure a serious editorial feel.
+- Subtle animations enhance user interaction without overwhelming. This includes a staggered fade-up effect for elements within the hero section upon load, a gentle lift and shadow increase on team card hover, and smooth scrolling transitions when navigating via navbar links.

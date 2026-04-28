@@ -1,0 +1,142 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Fondo para la sección de héroe. Un reloj antiguo.",
+      "imageUrl": "/images/hero-background.jpg",
+      "imageHint": "clock time"
+    },
+    {
+      "id": "team-1",
+      "description": "Retrato del miembro del equipo 1.",
+      "imageUrl": "/images/team-1.jpg",
+      "imageHint": "student portrait"
+    },
+    {
+      "id": "team-2",
+      "description": "Retrato del miembro del equipo 2.",
+      "imageUrl": "/images/team-2.jpg",
+      "imageHint": "student portrait"
+    },
+    {
+      "id": "team-3",
+      "description": "Retrato del miembro del equipo 3.",
+      "imageUrl": "/images/team-3.jpg",
+      "imageHint": "student portrait"
+    },
+    {
+      "id": "team-4",
+      "description": "Retrato del miembro del equipo 4.",
+      "imageUrl": "/images/team-4.jpg",
+      "imageHint": "student portrait"
+    },
+    {
+      "id": "team-5",
+      "description": "Retrato del miembro del equipo 5.",
+      "imageUrl": "/images/team-5.jpg",
+      "imageHint": "student portrait"
+    },
+    {
+      "id": "video-placeholder",
+      "description": "Miniatura para el video de la sección de video-reacción.",
+      "imageUrl": "/images/video-placeholder.jpg",
+      "imageHint": "abstract technology"
+    },
+    {
+      "id": "valores-visual",
+      "description": "Representación visual de la jerarquía de valores.",
+      "imageUrl": "/images/valores-visual.jpg",
+      "imageHint": "balance stones"
+    },
+    {
+      "id": "proposito-visual",
+      "description": "Imagen representando propósito profesional.",
+      "imageUrl": "/images/proposito-visual.jpg",
+      "imageHint": "compass direction"
+    },
+    {
+      "id": "poblaciones-visual",
+      "description": "Imagen representando comunidad y diversidad.",
+      "imageUrl": "/images/poblaciones-visual.jpg",
+      "imageHint": "community diversity"
+    },
+    {
+      "id": "mapa-visual",
+      "description": "Imagen para la sección de mapa crítico.",
+      "imageUrl": "/images/mapa-visual.jpg",
+      "imageHint": "blueprint analysis"
+    },
+    {
+      "id": "metafora-historia",
+      "description": "Puente Q'eswachaka, símbolo de historia y legado.",
+      "imageUrl": "/images/metafora-historia.jpg",
+      "imageHint": "inca bridge"
+    },
+    {
+      "id": "metafora-puente",
+      "description": "El puente Q'eswachaka como metáfora de la ingeniería ancestral.",
+      "imageUrl": "/images/metafora-puente.jpg",
+      "imageHint": "ancestral engineering"
+    },
+    {
+      "id": "metafora-proposito",
+      "description": "Paisaje inspirador que representa la conexión con el propósito.",
+      "imageUrl": "/images/metafora-proposito.jpg",
+      "imageHint": "inspiring landscape"
+    },
+    {
+      "id": "poblaciones-conectividad",
+      "description": "Infraestructura de red, representando la conectividad.",
+      "imageUrl": "/images/poblaciones-conectividad.jpg",
+      "imageHint": "network infrastructure"
+    },
+    {
+      "id": "poblaciones-empresas",
+      "description": "Dueño de una pequeña empresa trabajando.",
+      "imageUrl": "/images/poblaciones-empresas.jpg",
+      "imageHint": "small business"
+    },
+    {
+      "id": "poblaciones-mayores",
+      "description": "Persona mayor usando tecnología.",
+      "imageUrl": "/images/poblaciones-mayores.jpg",
+      "imageHint": "elderly technology"
+    },
+    {
+      "id": "proposito-hero",
+      "description": "Estudiantes graduándose.",
+      "imageUrl": "/images/proposito-hero.jpg",
+      "imageHint": "graduation students"
+    },
+    {
+      "id": "proposito-telos",
+      "description": "Retrato de una persona.",
+      "imageUrl": "/images/proposito-telos.jpg",
+      "imageHint": "portrait person"
+    },
+    {
+      "id": "proposito-arete",
+      "description": "Personas colaborando en una reunión.",
+      "imageUrl": "/images/proposito-arete.jpg",
+      "imageHint": "team collaboration"
+    },
+    {
+      "id": "proposito-eudaimonia",
+      "description": "Grupo de personas celebrando.",
+      "imageUrl": "/images/proposito-eudaimonia.jpg",
+      "imageHint": "group celebration"
+    },
+    {
+      "id": "mapa-critico-bg",
+      "description": "Fondo para el mapa crítico.",
+      "imageUrl": "/images/mapa-critico-bg.jpg",
+      "imageHint": "network abstract"
+    },
+    {
+      "id": "qeswachaka-landscape",
+      "description": "Puente colgante inca Q’eswachaka en un valle, tejido a mano con fibras vegetales.",
+      "imageUrl": "/images/qeswachaka-landscape.jpg",
+      "imageHint": "inca rope bridge valley"
+    }
+  ]
+}
