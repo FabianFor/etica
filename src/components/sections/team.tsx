@@ -10,7 +10,7 @@ const teamMembers = [
     lastName: "Muñico Marquiño",
     career: "Contabilidad y Finanzas",
     bio: "Estudiante de Contabilidad y Finanzas interesada en la gestión transparente y responsable de los recursos. Su enfoque ético se centra en la integridad financiera y el impacto social sostenible..",
-    linkedinUrl: "linkedin.com/in/elizabeth-yanina-muñico-marquiño-412957403",
+    linkedinUrl: "https://www.linkedin.com/in/elizabeth-yanina-muñico-marquiño-412957403",
     imageUrl: PlaceHolderImages.find(img => img.id === 'team-1')?.imageUrl || '',
   },
   {
@@ -26,7 +26,7 @@ const teamMembers = [
     lastName: "Huaytalla Guevara",
     career: "Ingenieria Empresarial y Sistemas",
     bio: "Interesado en la optimización de procesos y transformación digital con enfoque humano. Promueve soluciones eficientes alineadas con principios de justicia y sostenibilidad.",
-    linkedinUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/huaytalla-guevara-marcelo-carlos-a276823ba",
     imageUrl: PlaceHolderImages.find(img => img.id === 'team-3')?.imageUrl || '',
   },
   {
