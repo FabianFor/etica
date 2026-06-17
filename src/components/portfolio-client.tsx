@@ -6,11 +6,15 @@ import Footer from '@/components/layout/footer';
 import HeroSection from '@/components/sections/hero';
 import TeamSection from '@/components/sections/team';
 import ManifestoSection from '@/components/sections/manifesto';
+import PodcastSection from '@/components/sections/podcast';
+import VideoReaccionSection from '@/components/sections/videoreaccion';
 
 const sections = [
   { id: 'inicio', name: 'Inicio' },
   { id: 'equipo', name: 'Equipo' },
   { id: 'manifiesto', name: 'Manifiesto' },
+  { id: 'podcast', name: 'Podcast' },
+  { id: 'video-reaccion', name: 'Video-reacción' },
 ];
 
 export function PortfolioClient() {
@@ -45,6 +49,8 @@ export function PortfolioClient() {
         <HeroSection />
         <TeamSection />
         <ManifestoSection />
+        <PodcastSection />
+        <VideoReaccionSection />
       </main>
       <Footer />
     </div>

@@ -1,73 +1,53 @@
+import Link from 'next/link';
+import React from 'react';
+import { ArrowRight, Mic } from 'lucide-react';
 import SectionHeader from "@/components/ui/section-header";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mic } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Button } from '@/components/ui/button';
 
 export default function PodcastSection() {
   return (
-    <section id="podcast" className="min-h-screen w-full bg-background px-5 md:px-20 py-24 flex flex-col items-center justify-center border-t border-white/10">
-      <div className="container mx-auto">
+    <section id="podcast" className="relative overflow-hidden min-h-screen w-full bg-background px-5 md:px-20 py-24 flex flex-col justify-center items-center border-t border-white/10">
+      <div className="absolute inset-0 z-0" style={{backgroundImage: 'radial-gradient(circle at 25px 55px, hsl(var(--foreground)) 0.5px, transparent 1.5px), radial-gradient(circle at 150px 150px, hsl(var(--foreground)) 0.5px, transparent 1.5px)', backgroundSize: '200px 200px', opacity: 0.1}}/>
+      
+      <div className="relative z-10 container mx-auto">
         <SectionHeader
-          tag="Análisis Auditivo"
-          title="Episodio de Podcast"
-          subtitle="Exploramos un complejo dilema ético a través del diálogo, confrontando dos de las corrientes filosóficas más influyentes."
+          tag="Módulo II · Semanas 6–7"
+          title="Podcast de Dilema Moral"
+          subtitle="Un caso real del contexto peruano analizado desde dos marcos filosóficos contrapuestos: el deber kantiano y el utilitarismo de Mill."
         />
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Podcast Player */}
-          <div className="w-full">
-            <div className="bg-primary text-primary-foreground rounded-t-lg p-4 flex items-center gap-4">
-              <Mic className="w-6 h-6 flex-shrink-0" />
-              <div>
-                <p className="text-sm font-medium">Episodio 1: El Dilema de [Nombre del Caso]</p>
-                <p className="text-xs opacity-80">Brújula Ética Podcast</p>
-              </div>
-            </div>
-            <div className="border border-dashed border-t-0 rounded-b-lg p-8 text-center bg-card/50">
-              <p className="font-body text-muted-foreground mb-4">
-                [Área para el reproductor de podcast embebido]
-              </p>
-              <div className="w-full h-24 bg-muted/50 rounded-md flex items-center justify-center">
-                <p className="font-semibold text-muted-foreground">[Embed Player Here]</p>
-              </div>
-              <div className="flex flex-wrap gap-2 justify-center mt-6">
-                <Badge className="bg-primary/20 text-primary-foreground border-primary/30 hover:bg-primary/30">Dilema Ético</Badge>
-                <Badge className="bg-primary/20 text-primary-foreground border-primary/30 hover:bg-primary/30">Análisis Filosófico</Badge>
-                <Badge className="bg-primary/20 text-primary-foreground border-primary/30 hover:bg-primary/30">Deontología</Badge>
-              </div>
-            </div>
-          </div>
-
-          {/* Dilemma and Analysis */}
-          <div className="space-y-8">
-            <div className="border-l-4 border-primary pl-6">
-              <h3 className="font-headline text-xl font-semibold text-primary">El Dilema</h3>
-              <p className="font-body italic text-muted-foreground mt-2 text-justify">
-                "[Descripción concisa del dilema ético presentado en el podcast. Por ejemplo: ¿Debería un profesional revelar información confidencial de un cliente si cree que podría prevenir un daño mayor a terceros?]"
-              </p>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="font-headline text-lg text-center">Perspectiva Kantiana</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="font-body text-sm text-muted-foreground text-justify">
-                    Análisis desde el imperativo categórico. El deber de no mentir o romper la confidencialidad es universal, sin importar las consecuencias.
+        
+        <div className="max-w-4xl mx-auto">
+          <Link href="/podcast" className="block group">
+            <div className="bg-card/50 backdrop-blur-sm border border-white/10 rounded-2xl shadow-lg hover:shadow-primary/20 hover:shadow-2xl hover:border-primary/50 transition-all duration-300 p-12">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="flex-grow">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mic className="w-8 h-8 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-body text-primary font-semibold uppercase tracking-wider text-sm">Módulo II</p>
+                      <h3 className="font-headline text-2xl md:text-3xl text-primary">Podcast de Dilema Moral</h3>
+                    </div>
+                  </div>
+                  
+                  <p className="mt-6 font-body text-foreground/80 text-justify">
+                    Exploramos un dilema ético complejo extraído de situaciones reales en el Perú, confrontando dos de las corrientes filosóficas más influyentes: el imperativo categórico de Kant versus el utilitarismo de John Stuart Mill. A través del diálogo y el análisis profundo, examinamos cómo diferentes marcos éticos pueden llegar a conclusiones completamente opuestas ante el mismo problema.
                   </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="font-headline text-lg text-center">Perspectiva de Mill</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="font-body text-sm text-muted-foreground text-justify">
-                    Análisis utilitarista. La acción correcta es la que maximiza la felicidad o el bienestar general para el mayor número de personas.
-                  </p>
-                </CardContent>
-              </Card>
+                  
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Dilema Ético</span>
+                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Análisis Filosófico</span>
+                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Deontología vs Utilitarismo</span>
+                  </div>
+                </div>
+                
+                <div className="text-primary/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform group-hover:translate-x-0 -translate-x-4 flex-shrink-0">
+                  <ArrowRight className="w-10 h-10" />
+                </div>
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
