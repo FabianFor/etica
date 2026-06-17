@@ -146,8 +146,8 @@ export const INTEGRANTES_TIMESTAMPS: TeammateTimestamp[] = [
   },
   {
     id: '5',
-    minutes: 6,
-    seconds: 27,
+    minutes: 9,
+    seconds: 9,
     name: 'MARCELO',
     topic: 'Reflexión critica y cierra'
   }
