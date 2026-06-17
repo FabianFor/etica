@@ -13,7 +13,9 @@ import {
   Music,
   ChevronDown,
   Mic,
+  ArrowLeft,
 } from "lucide-react";
+import Link from "next/link";
 
 // ==========================================
 // CONFIGURACIÓN DE RECURSOS LOCALES
@@ -741,6 +743,11 @@ export default function PodcastPage() {
       className="min-h-screen md:h-screen w-full md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative selection:bg-purple-800 selection:text-white"
       style={{ background: "#0a0318", color: "#e2d9f3" }}
     >
+      {/* ========== BOTÓN DE RETROCESO ========== */}
+      <Link href="/#manifiesto" className="fixed top-6 left-6 z-[100] w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-all user-select-none bg-white/10 border border-white/20 text-white backdrop-blur-sm hover:bg-white/20 hover:scale-105">
+        <ArrowLeft />
+      </Link>
+
       {/* Global ambient glows */}
       <div
         className="fixed pointer-events-none"

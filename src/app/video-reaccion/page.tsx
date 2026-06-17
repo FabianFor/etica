@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useRef } from 'react';
-import { Clock, User } from 'lucide-react';
+import { Clock, User, ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
 
 // ============================================================================
 // INTERFACES Y TIPOS
@@ -76,8 +77,8 @@ export interface AcademicReading {
 export const VIDEOS_DATA: Video[] = [
   {
     id: 'la-caverna-digital',
-    title: 'La Caverna Digital: Algoritmia, Sesgos y la Postverdad en el Siglo XXI',
-    author: 'Prof. Héctor Alarcón',
+    title: 'Código Ciego Ética profesional frente a la inteligencia artificial',
+    author: '',
     views: '124,530',
     duration: '22:15',
     date: '14 de Jun, 2026',
@@ -177,7 +178,17 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen text-white" style={{ backgroundColor: '#000' }}>
+
+      {/* Imagen de fondo con filtros */}
+      <div className="fixed inset-0 z-0" style={{
+        backgroundImage: 'url("/images/bg-videoreaccion.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        filter: 'brightness(1) saturate(1) contrast(1.1)',
+      }} />
+
       <style>{`
         * {
           scroll-behavior: smooth;
@@ -221,7 +232,12 @@ export default function App() {
         }
       `}</style>
 
-      <main className="bg-black text-white">
+      {/* ========== BOTÓN DE RETROCESO ========== */}
+      <Link href="/#manifiesto" className="fixed top-6 left-6 z-[100] w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-all user-select-none bg-white/10 border border-white/20 text-white backdrop-blur-sm hover:bg-white/20 hover:scale-105">
+        <ArrowLeft />
+      </Link>
+
+      <main className="relative z-10 text-white">
         
         {/* ========== HERO SECTION: FULL HEIGHT ========== */}
         <section className="hero-section relative">
@@ -230,7 +246,7 @@ export default function App() {
           <div className="text-center mb-8 px-6 select-none">
             <h1 className="font-serif text-3xl md:text-4xl lg:text-4xl font-extrabold tracking-wide text-white uppercase leading-tight">
               
-              [{selectedVideo.title}]
+              {selectedVideo.title}
             </h1>
           </div>
 
@@ -308,7 +324,7 @@ export default function App() {
         </section>
 
         {/* ========== ANALYSIS SECTIONS (Below Hero) ========== */}
-        <section className="bg-black py-20 px-6 md:px-12 lg:px-16">
+        <section className="py-20 px-6 md:px-12 lg:px-16">
           <div className="max-w-6xl mx-auto">
             
             {/* Section Title */}
@@ -329,9 +345,7 @@ export default function App() {
                 <h4 className="font-serif text-lg md:text-xl font-bold tracking-wide uppercase text-white mb-4 select-none">
                   Vacíos normativos identificados
                 </h4>
-                <p className="font-sans text-sm md:text-base text-gray-400 leading-relaxed bg-black/30 p-4 border-l-2 border-gray-500 rounded-r select-none mb-5">
-                  Describe las situaciones del dilema que los códigos deontológicos no contemplan adecuadamente. ¿Dónde falló la norma frente a la realidad profesional?
-                </p>
+<p className="font-sans text-sm md:text-base text-gray-400 leading-relaxed text-justify bg-black/30 p-4 border-l-2 border-gray-500 rounded-r select-none mb-5">Durante la videoreacción se identificó que los códigos deontológicos actuales no contemplan de manera específica los riesgos de la inteligencia artificial en los procesos de contratación. Aunque existen normas contra la discriminación, estas no regulan adecuadamente los sesgos algorítmicos ni exigen transparencia en la toma de decisiones automatizadas. Como resultado, la empresa puede utilizar una herramienta discriminatoria sin comprender completamente cómo funciona.                </p>
               </div>
 
               {/* 2. Tensiones ético-legales */}
@@ -339,9 +353,7 @@ export default function App() {
                 <h4 className="font-serif text-lg md:text-xl font-bold tracking-wide uppercase text-white mb-4 select-none">
                   Tensiones ético-legales
                 </h4>
-                <p className="font-sans text-sm md:text-base text-gray-400 leading-relaxed bg-black/30 p-4 border-l-2 border-gray-500 rounded-r select-none mb-5">
-                  Explica los conflictos identificados entre la obligación legal y la conciencia moral del profesional. ¿Cuándo la ley no alcanza para guiar una decisión justa?
-                </p>
+<p className="font-sans text-sm md:text-base text-gray-400 leading-relaxed text-justify bg-black/30 p-4 border-l-2 border-gray-500 rounded-r select-none mb-5">Se observa un conflicto entre los intereses económicos de la empresa y la obligación ética de respetar la igualdad de oportunidades. Aunque la implementación del sistema podría ser legal, sus resultados generan discriminación hacia determinados grupos de personas. Esto demuestra que la legalidad no siempre garantiza una decisión moralmente correcta y que el profesional debe actuar de acuerdo con principios éticos más amplios.                </p>
               </div>
 
               {/* 3. Propuesta de humanización */}
@@ -349,9 +361,7 @@ export default function App() {
                 <h4 className="font-serif text-lg md:text-xl font-bold tracking-wide uppercase text-white mb-4 select-none">
                   Propuesta de humanización
                 </h4>
-                <p className="font-sans text-sm md:text-base text-gray-400 leading-relaxed bg-black/30 p-4 border-l-2 border-gray-500 rounded-r select-none mb-5">
-                  Presenta los artículos o reformulaciones propuestas que reflejen una ética más humanista y contextualizada al Perú. Fundaméntalas filosóficamente.
-                </p>
+<p className="font-sans text-sm md:text-base text-gray-400 leading-relaxed text-justify bg-black/30 p-4 border-l-2 border-gray-500 rounded-r select-none mb-5">En la videoreacción se propuso incorporar un principio de Transparencia y Equidad Algorítmica dentro del código deontológico profesional. Este principio exigiría supervisión humana obligatoria, auditorías periódicas y mecanismos para detectar sesgos discriminatorios. La propuesta busca garantizar que la tecnología respete la dignidad humana y promueva la igualdad de oportunidades.                </p>
               </div>
 
               {/* 4. Reflexión sobre presión de decisión */}
@@ -359,9 +369,7 @@ export default function App() {
                 <h4 className="font-serif text-lg md:text-xl font-bold tracking-wide uppercase text-white mb-4 select-none">
                   Reflexión sobre presión de decisión
                 </h4>
-                <p className="font-sans text-sm md:text-base text-gray-400 leading-relaxed bg-black/30 p-4 border-l-2 border-gray-500 rounded-r select-none mb-5">
-                  ¿Cómo influye la presión institucional, social o económica en las decisiones del profesional? Conecta con Weber (ética de la responsabilidad) y Levinas (alteridad).
-                </p>
+<p className="font-sans text-sm md:text-base text-gray-400 leading-relaxed text-justify bg-black/30 p-4 border-l-2 border-gray-500 rounded-r select-none mb-5">La presión económica y organizacional puede llevar a los profesionales a aceptar decisiones que saben que son incorrectas. En el caso analizado, el temor a retrasar el proyecto o afectar los resultados de la empresa influye en la toma de decisiones. Desde la perspectiva de Weber, el profesional debe asumir la responsabilidad de las consecuencias de sus actos. Por otro lado, Levinas recuerda que toda decisión debe considerar el impacto que tiene sobre las personas afectadas, priorizando el respeto por el otro antes que la simple eficiencia.                </p>
               </div>
 
             </div>
