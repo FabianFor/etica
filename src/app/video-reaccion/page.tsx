@@ -223,12 +223,12 @@ export default function App() {
         }
 
         .hero-section {
-          height: 100vh;
+          min-height: 100vh;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
           padding-top: 2rem;
-          overflow: hidden;
+          padding-bottom: 2rem;
         }
       `}</style>
 
@@ -239,7 +239,7 @@ export default function App() {
 
       <main className="relative z-10 text-white">
         
-        {/* ========== HERO SECTION: FULL HEIGHT ========== */}
+        {/* ========== HERO SECTION: FULL HEIGHT (crece si el contenido no entra) ========== */}
         <section className="hero-section relative">
           
           {/* Title */}
@@ -252,11 +252,11 @@ export default function App() {
 
           {/* Main Content: Video Player + Timestamps */}
           <div className="flex-1 px-6 md:px-12 lg:px-16 pb-6">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-full md:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
               
               {/* Left Column: Video Player (60%) */}
-              <div className="lg:col-span-7 w-full h-full flex items-center justify-center">
-                <div className="w-full h-full max-h-[500px] md:max-h-[600px] relative rounded-lg overflow-hidden shadow-2xl bg-black border border-gray-700">
+              <div className="lg:col-span-7 w-full flex items-center justify-center">
+                <div className="w-full aspect-video lg:h-full lg:aspect-auto max-h-[500px] md:max-h-[600px] relative rounded-lg overflow-hidden shadow-2xl bg-black border border-gray-700">
                 <iframe
                   src={selectedVideo.videoUrl}
                   className="w-full h-full"
@@ -267,8 +267,8 @@ export default function App() {
               </div>
 
               {/* Right Column: Interactive Timestamps (40%) */}
-              <div className="lg:col-span-5 w-full h-full flex items-center">
-                <div className="w-full bg-black border border-gray-700 rounded-lg p-6 shadow-xl relative overflow-hidden text-left h-full md:max-h-[600px] flex flex-col">
+              <div className="lg:col-span-5 w-full flex items-center">
+                <div className="w-full bg-black border border-gray-700 rounded-lg p-6 shadow-xl relative overflow-hidden text-left max-h-[420px] md:max-h-[600px] flex flex-col">
                   <div className="absolute top-0 right-0 w-20 h-20 pointer-events-none opacity-20 border-t-2 border-r-2 border-gray-600" />
                   
                   <div className="flex items-center gap-2 mb-6 border-b border-gray-700 pb-4 select-none">
