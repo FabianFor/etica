@@ -257,12 +257,12 @@ export default function App() {
               {/* Left Column: Video Player (60%) */}
               <div className="lg:col-span-7 w-full h-full flex items-center justify-center">
                 <div className="w-full h-full max-h-[500px] md:max-h-[600px] relative rounded-lg overflow-hidden shadow-2xl bg-black border border-gray-700">
-<iframe
-  src={selectedVideo.videoUrl}
-  className="w-full h-full"
-  frameBorder="0"
-  allow="autoplay"
-/>
+                <iframe
+                  src={selectedVideo.videoUrl}
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="autoplay"
+                />
                 </div>
               </div>
 
