@@ -1,0 +1,176 @@
+/* Reset some styles for consistency with the main theme */
+.poblaciones-page {
+    --gold: hsl(var(--accent));
+    --gold-light: hsl(var(--accent));
+    --dark: hsl(var(--background));
+    background-color: hsl(var(--background));
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.poblaciones-page .header{text-align:center;padding:1.2rem 1rem 1rem;border-bottom:1px solid hsl(var(--border) / 0.3)}
+.poblaciones-page .header-title{font-family:'Cinzel', serif; font-size:clamp(20px,3vw,32px);font-weight:700;color:hsl(var(--primary));text-transform:uppercase;letter-spacing:0.1em}
+.poblaciones-page .header-line{width:44px;height:1.5px;background:var(--gold);margin:0.4rem auto 0;opacity:0.6}
+
+/* COLLAGE */
+.poblaciones-page .collage{display:flex;width:100%;height:auto;min-height:380px; flex-shrink: 0;}
+.poblaciones-page .panel{position:relative;flex:1;overflow:hidden;cursor:pointer;transition:flex 0.5s cubic-bezier(0.4,0,0.2,1);border-right:1px solid hsl(var(--border) / 0.2)}
+.poblaciones-page .panel:last-child{border-right:none}
+.poblaciones-page .panel:hover{flex:1.22}
+.poblaciones-page .panel img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease,filter 0.4s ease;filter:brightness(0.6) saturate(0.9)}
+.poblaciones-page .panel:hover img.bg{transform:scale(1.05);filter:brightness(0.75) saturate(1)}
+.poblaciones-page .panel::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,hsl(var(--background)/0.5) 0%,transparent 38%),linear-gradient(to top,hsl(var(--background)/0.8) 0%,transparent 45%);z-index:1}
+.poblaciones-page .pcontent{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:space-between;padding:1.2rem 1.5rem 1.5rem}
+.poblaciones-page .pbottom{background:hsl(var(--card)/0.7);border:1px solid hsl(var(--border));border-radius:3px;padding:0.8rem 1rem;backdrop-filter:blur(6px)}
+.poblaciones-page .pdesc{font-size:clamp(14px,1.3vw,15px);line-height:1.55;color:hsl(var(--card-foreground) / 0.9);text-align: justify;}
+
+/* COMPROMISO */
+.poblaciones-page .compromiso {
+    background: hsl(var(--background));
+    border-top: 1px solid hsl(var(--border));
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 5rem;
+}
+
+.poblaciones-page .comp-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.poblaciones-page .comp-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 700;
+    color: hsl(var(--foreground));
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 0;
+}
+
+.poblaciones-page .comp-line {
+    width: 50px;
+    height: 1.5px;
+    background: var(--gold);
+    margin: 1rem 0;
+    opacity: 0.7;
+}
+
+.poblaciones-page .comp-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.poblaciones-page .comp-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poblaciones-page .comp-icon-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid hsl(var(--accent) / 0.4);
+    background: hsl(var(--accent) / 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    transition: background-color 0.3s;
+}
+
+.poblaciones-page .comp-icon-circle:hover {
+    background: hsl(var(--accent) / 0.15);
+}
+
+.poblaciones-page .comp-right {
+    padding-left: 2rem;
+}
+
+.poblaciones-page .comp-text {
+    font-family: 'Crimson Text', serif;
+    font-size: clamp(17px, 1.5vw, 18px);
+    line-height: 1.9;
+    color: hsl(var(--foreground));
+    text-align: justify;
+}
+
+/* Responsive adjustments for Compromiso section */
+@media (max-width: 900px) {
+    .poblaciones-page .compromiso {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+        text-align: center;
+    }
+    .poblaciones-page .comp-left {
+        align-items: center;
+    }
+     .poblaciones-page .comp-text {
+        text-align: justify;
+     }
+     .poblaciones-page .comp-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .poblaciones-page .comp-icons {
+        justify-content: center;
+    }
+    .poblaciones-page .comp-right {
+        padding-left: 0;
+    }
+}
+
+
+/* OVERLAY */
+.poblaciones-page .fs-overlay{position:fixed;inset:0;z-index:200;background:hsl(var(--background)/0);pointer-events:none;transition:background 0.4s ease}
+.poblaciones-page .fs-overlay.open{background:hsl(var(--background)/0.9);backdrop-filter: blur(4px);pointer-events:all}
+.poblaciones-page .fs-inner{position:absolute;inset:0;display:flex;align-items:stretch;opacity:0;transform:scale(0.97);transition:opacity 0.4s ease,transform 0.4s ease}
+.poblaciones-page .fs-overlay.open .fs-inner{opacity:1;transform:scale(1)}
+.poblaciones-page .fs-img-wrap{flex:1.2;position:relative;overflow:hidden}
+.poblaciones-page .fs-img-wrap img{width:100%;height:100%;object-fit:cover;}
+.poblaciones-page .fs-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 55%,hsl(var(--background)) 100%)}
+.poblaciones-page .fs-info{width:44%;flex-shrink:0;display:flex;flex-direction:column;justify-content:center;padding:3rem 2.8rem 2.5rem;position:relative}
+
+.poblaciones-page .ptitle, .poblaciones-page .fs-title{font-size:clamp(14px, 1.5vw, 16px);letter-spacing:0.2em;color:hsl(var(--foreground));text-transform:uppercase;margin-bottom:0.25rem; font-weight: 400;}
+.poblaciones-page .ptag, .poblaciones-page .fs-tag{font-size:clamp(18px, 2.2vw, 24px); color: hsl(var(--accent)); font-weight: 700; line-height: 1.2; letter-spacing: 0.04em; text-transform: uppercase;}
+
+.poblaciones-page .fs-stat{font-size:clamp(26px,3.8vw,48px);font-weight:700;color:var(--gold-light);margin-bottom:1.4rem;line-height:1}
+.poblaciones-page .fs-divider{width:40px;height:1.5px;background:var(--gold);margin-bottom:1.2rem;opacity:0.6}
+.poblaciones-page .fs-desc{font-size:clamp(16px,1.5vw,18px);line-height:1.85;color:hsl(var(--foreground)/0.8);max-width:420px;text-align: justify;}
+.poblaciones-page .fs-quote{font-family: 'Crimson Text', serif; font-style:italic;color:hsl(var(--muted-foreground));font-size:clamp(15px,1.3vw,16px);margin-top:1.2rem;border-left:2px solid hsl(var(--accent)/0.4);padding-left:1rem;line-height:1.7}
+.poblaciones-page .fs-source{font-size:13px;color:var(--gold);margin-top:0.8rem;opacity:0.8; font-family: 'DM Sans', sans-serif;}
+.poblaciones-page .fs-close{position:absolute;top:1.2rem;right:1.2rem;width:34px;height:34px;border-radius:50%;background:hsl(var(--accent)/0.1);border:1px solid hsl(var(--accent)/0.4);color:var(--gold-light);font-size:15px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s}
+.poblaciones-page .fs-close:hover{background:hsl(var(--accent)/0.25)}
+.poblaciones-page .fs-nav{position:absolute;bottom:1.5rem;right:2.8rem;display:flex;gap:0.7rem}
+.poblaciones-page .fs-nav-btn{width:34px;height:34px;border-radius:50%;background:hsl(var(--accent)/0.1);border:1px solid hsl(var(--accent)/0.4);color:var(--gold-light);font-size:14px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.2s}
+.poblaciones-page .fs-nav-btn:hover{background:hsl(var(--accent)/0.22)}
+
+@media (max-width: 768px) {
+    .poblaciones-page .fs-inner {
+        flex-direction: column;
+    }
+    .poblaciones-page .fs-img-wrap {
+        height: 40vh;
+        flex: none;
+    }
+    .poblaciones-page .fs-img-wrap::after {
+        background: linear-gradient(to top, hsl(var(--background)) 0%, transparent 100%);
+    }
+    .poblaciones-page .fs-info {
+        width: 100%;
+        height: auto;
+        padding: 2rem 1.5rem;
+        justify-content: flex-start;
+        overflow-y: auto;
+    }
+}
