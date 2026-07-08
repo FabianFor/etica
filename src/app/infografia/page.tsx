@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Shield, Leaf } from 'lucide-react';
 import { Space_Grotesk, Inter } from 'next/font/google';
@@ -8,19 +8,36 @@ import { Space_Grotesk, Inter } from 'next/font/google';
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], weight: ['500', '600', '700'] });
 const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
 
+type Star = {
+  id: number;
+  top: string;
+  left: string;
+  size: number;
+  delay: string;
+  duration: string;
+  opacity: number;
+};
+
 export default function InfografiaCosmicaPage() {
   const [activeTab, setActiveTab] = useState<'capa1' | 'capa2'>('capa1');
+  const [stars, setStars] = useState<Star[]>([]);
 
-  const stars = useMemo(() => {
-    return Array.from({ length: 80 }).map((_, i) => ({
-      id: i,
-      top: `${Math.random() * 100}%`,
-      left: `${Math.random() * 100}%`,
-      size: Math.random() * 2 + 0.6,
-      delay: `${Math.random() * 5}s`,
-      duration: `${3 + Math.random() * 6}s`,
-      opacity: Math.random() * 0.75 + 0.25,
-    }));
+  // Generamos las estrellas SOLO en el cliente, después del montaje.
+  // Esto evita el error de hidratación: el servidor renderiza el array
+  // vacío y el cliente lo llena después, en vez de que servidor y
+  // cliente generen valores de Math.random() distintos.
+  useEffect(() => {
+    setStars(
+      Array.from({ length: 80 }).map((_, i) => ({
+        id: i,
+        top: `${Math.random() * 100}%`,
+        left: `${Math.random() * 100}%`,
+        size: Math.random() * 2 + 0.6,
+        delay: `${Math.random() * 5}s`,
+        duration: `${3 + Math.random() * 6}s`,
+        opacity: Math.random() * 0.75 + 0.25,
+      }))
+    );
   }, []);
 
   const data = {
