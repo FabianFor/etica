@@ -744,7 +744,7 @@ export default function PodcastPage() {
       style={{ background: "#0a0318", color: "#e2d9f3" }}
     >
       {/* ========== BOTÓN DE RETROCESO ========== */}
-      <Link href="/#manifiesto" className="fixed top-6 left-6 z-[100] w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-all user-select-none bg-white/10 border border-white/20 text-white backdrop-blur-sm hover:bg-white/20 hover:scale-105">
+      <Link href="/#podcast" className="fixed top-6 left-6 z-[100] w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-all user-select-none bg-white/10 border border-white/20 text-white backdrop-blur-sm hover:bg-white/20 hover:scale-105">
         <ArrowLeft />
       </Link>
 

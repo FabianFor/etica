@@ -19,7 +19,7 @@ export default function InfographySection() {
         />
 
         <div className="max-w-3xl mx-auto mt-12 px-4">
-          <Link href="/infografia-cosmica" className="block group">
+          <Link href="/infografia" className="block group">
             <div className="relative h-96 md:h-[28rem] rounded-2xl overflow-hidden border border-white/10 shadow-xl group-hover:border-emerald-500/50 transition-all duration-300">
               <Image
                 src="/images/infografia-cosmica.jpg"
